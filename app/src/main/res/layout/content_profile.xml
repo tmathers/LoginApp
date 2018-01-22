@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.tara.loginapp.ProfileActivity"
+    tools:showIn="@layout/activity_profile"
+    android:id="@+id/profile_layout"
+    android:layout_margin="15dip"
+
+    android:gravity="center"
+
+    >
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/pick_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Profile Picture"
+
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_below="@+id/emailText"
+
+        android:layout_marginTop="@dimen/margin"/>
+
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginTop="@dimen/margin_large"
+        />
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/headerText"
+
+        />
+
+
+<!-- Weather data -->
+    <TextView
+        android:id="@+id/city_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:text="Getting Weather..."
+        android:layout_below="@+id/profile_image"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/weather_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/city_field" />
+
+
+    <TextView
+        android:id="@+id/temp_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/weather_field" />
+
+
+</LinearLayout>
