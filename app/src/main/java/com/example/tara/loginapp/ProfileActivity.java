@@ -382,7 +382,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                                 Log.e(LOG_TAG, "Got Weather JSON: " + response.toString());
                                 weather = response.getJSONArray("weather").getJSONObject(0).getString("main");
                                 Double temp = response.getJSONObject("main").getDouble("temp");
-                                temperature = "" + (temp - 273.15) + " ° C"; // Convert K to C
+                                temperature = "" + Math.round(temp - 273.15) + " ° C"; // Convert K to C
 
                                 setWeatherData();
 
